@@ -1,0 +1,31 @@
+# Kranti's PCAP Analyzer - Requirements
+#
+# Install in this order:
+#   Step 1: pip install --pre agent-framework
+#   Step 2: pip install -r requirements.txt
+
+# ── Microsoft Agent Framework (MAF) ─────────────────────────────────────────
+# Run separately: pip install --pre agent-framework
+
+# ── Azure OpenAI ─────────────────────────────────────────────────────────────
+openai>=1.0.0
+azure-identity>=1.15.0
+
+# ── SIP / PCAP parsing ───────────────────────────────────────────────────────
+pyshark>=0.6.0
+# Also requires Wireshark/tshark: https://www.wireshark.org/download.html
+
+# ── Pre-built wheels to avoid C++ compiler requirement ───────────────────────
+contourpy==1.2.1
+matplotlib==3.8.4
+
+# ── Gradio UI ────────────────────────────────────────────────────────────────
+# Use these EXACT versions to avoid Jinja2 / huggingface_hub conflicts
+gradio==4.19.2
+gradio-client==0.10.1
+jinja2==3.1.2
+huggingface_hub==0.23.4
+
+# ── Utilities ────────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0
+requests>=2.31.0
